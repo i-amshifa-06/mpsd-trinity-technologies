@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mpsdtrinitytechnology.com/sitemap.xml
+Sitemap: https://mpsd-trinity-technologies.vercel.app/sitemap.xml
