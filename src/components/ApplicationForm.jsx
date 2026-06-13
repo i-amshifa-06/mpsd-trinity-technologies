@@ -12,8 +12,8 @@ export default function ApplicationForm({
 
   const formAction =
     type === "career"
-      ? "https://formspree.io/f/xrevynzd"
-      : "https://formspree.io/f/mqeoyrka";
+      ? "https://formspree.io/f/xrevoaoo"
+      : "https://formspree.io/f/xdavplpv";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
