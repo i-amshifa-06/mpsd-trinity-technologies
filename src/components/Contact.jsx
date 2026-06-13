@@ -20,7 +20,7 @@ export default function Contact() {
 
     try {
       const response = await fetch(
-        "https://formspree.io/f/mbdezavo",
+        "https://formspree.io/f/xkoapvpz",
         {
           method: "POST",
           body: formData,
