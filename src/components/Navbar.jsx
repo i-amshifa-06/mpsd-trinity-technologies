@@ -1,25 +1,20 @@
+
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", id: "home" },
-    { name: "About", id: "about" },
-    { name: "Services", id: "services" },
-    { name: "Projects", id: "projects" },
-    { name: "Careers", id: "careers" },
-    { name: "Internship", id: "internship" },
-    { name: "Contact", id: "contact" },
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Projects", path: "/projects" },
+    { name: "Careers", path: "/careers" },
+    { name: "Internship", path: "/internship" },
+    { name: "Contact", path: "/contact" },
   ];
-
-  const scrollToSection = (sectionId) => {
-    document.getElementById(sectionId)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
 
   return (
     <nav
@@ -40,9 +35,9 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
-          <button
-            onClick={() => scrollToSection("home")}
-            className="flex items-center gap-3 cursor-pointer"
+          <Link
+            to="/"
+            className="flex items-center gap-3"
           >
             <img
               src="/splash.png"
@@ -80,30 +75,29 @@ export default function Navbar() {
                 Innovate • Integrate • Impact
               </p>
             </div>
-          </button>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-8">
 
             {navLinks.map((link) => (
-              <button
+              <Link
                 key={link.name}
-                onClick={() => scrollToSection(link.id)}
+                to={link.path}
                 className="
                 text-[#022b3a]
                 hover:text-[#1f7a8c]
                 font-medium
                 transition-colors
                 duration-300
-                cursor-pointer
                 "
               >
                 {link.name}
-              </button>
+              </Link>
             ))}
 
-            <button
-              onClick={() => scrollToSection("careers")}
+            <Link
+              to="/careers"
               className="
               bg-[#1f7a8c]
               hover:bg-[#056c92]
@@ -114,11 +108,10 @@ export default function Navbar() {
               font-semibold
               transition-all
               duration-300
-              cursor-pointer
               "
             >
               Apply Now
-            </button>
+            </Link>
 
           </div>
 
@@ -151,34 +144,23 @@ export default function Navbar() {
           <div className="px-6 py-6 flex flex-col gap-5">
 
             {navLinks.map((link) => (
-              <button
+              <Link
                 key={link.name}
-                onClick={() => {
-                  setMenuOpen(false);
-
-                  setTimeout(() => {
-                    scrollToSection(link.id);
-                  }, 150);
-                }}
+                to={link.path}
+                onClick={() => setMenuOpen(false)}
                 className="
-                text-left
                 text-[#022b3a]
                 hover:text-[#1f7a8c]
                 transition
                 "
               >
                 {link.name}
-              </button>
+              </Link>
             ))}
 
-            <button
-              onClick={() => {
-                setMenuOpen(false);
-
-                setTimeout(() => {
-                  scrollToSection("careers");
-                }, 150);
-              }}
+            <Link
+              to="/careers"
+              onClick={() => setMenuOpen(false)}
               className="
               mt-2
               bg-[#1f7a8c]
@@ -187,12 +169,13 @@ export default function Navbar() {
               py-3
               rounded-xl
               font-semibold
+              text-center
               transition-all
               duration-300
               "
             >
               Apply Now
-            </button>
+            </Link>
 
           </div>
         </div>
@@ -200,3 +183,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

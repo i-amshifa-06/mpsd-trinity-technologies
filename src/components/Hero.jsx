@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
 return ( <section
@@ -171,56 +172,48 @@ return ( <section
           mb-6
           "
         >
-          <button
-            onClick={() =>
-              document
-                .getElementById("projects")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-            className="
-            w-full
-            sm:w-auto
-            bg-[#1f7a8c]
-            hover:bg-[#056c92]
-            text-white
-            px-8
-            py-4
-            rounded-xl
-            font-semibold
-            transition-all
-            duration-300
-            hover:scale-105
-            cursor-pointer
-            "
-          >
-            Explore Projects
-          </button>
+          <Link
+  to="/projects"
+  className="
+  w-full
+  sm:w-auto
+  bg-[#1f7a8c]
+  hover:bg-[#056c92]
+  text-white
+  px-8
+  py-4
+  rounded-xl
+  font-semibold
+  transition-all
+  duration-300
+  hover:scale-105
+  text-center
+  "
+>
+  Explore Projects
+</Link>
 
-          <button
-            onClick={() =>
-              document
-                .getElementById("contact")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-            className="
-            w-full
-            sm:w-auto
-            border-2
-            border-[#bfdbf7]
-            text-[#bfdbf7]
-            hover:bg-[#bfdbf7]
-            hover:text-[#022b3a]
-            px-8
-            py-4
-            rounded-xl
-            font-semibold
-            transition-all
-            duration-300
-            cursor-pointer
-            "
-          >
-            Contact Us
-          </button>
+          <Link
+  to="/contact"
+  className="
+  w-full
+  sm:w-auto
+  border-2
+  border-[#bfdbf7]
+  text-[#bfdbf7]
+  hover:bg-[#bfdbf7]
+  hover:text-[#022b3a]
+  px-8
+  py-4
+  rounded-xl
+  font-semibold
+  transition-all
+  duration-300
+  text-center
+  "
+>
+  Contact Us
+</Link>
         </div>
 
       </motion.div>
