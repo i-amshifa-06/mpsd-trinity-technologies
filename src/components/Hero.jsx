@@ -177,6 +177,8 @@ return ( <section
   className="
   w-full
   sm:w-auto
+  border-2
+  border-[#bfdbf7]
   bg-[#1f7a8c]
   hover:bg-[#056c92]
   text-white
