@@ -1,9 +1,4 @@
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaGithub,
-} from "react-icons/fa";
+import { FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   const scrollToSection = (sectionId) => {
@@ -136,68 +131,47 @@ export default function Footer() {
           </div>
 
           {/* Social */}
-          <div>
-            <h3 className="font-bold text-xl mb-5">
-              Connect With Us
-            </h3>
+<div>
+  <h3 className="font-bold text-xl mb-5">
+    Connect With Us
+  </h3>
 
-            <div className="flex gap-4">
+  <div className="flex gap-4">
+    {/* Instagram */}
+    <a
+      href="https://www.instagram.com/mpsdtrinitytechnologies?igsh=bXIxZjB3MjVrcXdx"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        bg-[#1f7a8c]
+        p-3
+        rounded-xl
+        hover:bg-[#056c92]
+        transition
+      "
+      aria-label="Instagram"
+    >
+      <FaInstagram size={20} />
+    </a>
 
-              <a
-                href="#"
-                className="
-                bg-[#1f7a8c]
-                p-3
-                rounded-xl
-                hover:bg-[#056c92]
-                transition
-                "
-              >
-                <FaLinkedin size={20} />
-              </a>
-
-              <a
-                href="#"
-                className="
-                bg-[#1f7a8c]
-                p-3
-                rounded-xl
-                hover:bg-[#056c92]
-                transition
-                "
-              >
-                <FaInstagram size={20} />
-              </a>
-
-              <a
-                href="#"
-                className="
-                bg-[#1f7a8c]
-                p-3
-                rounded-xl
-                hover:bg-[#056c92]
-                transition
-                "
-              >
-                <FaFacebook size={20} />
-              </a>
-
-              <a
-                href="#"
-                className="
-                bg-[#1f7a8c]
-                p-3
-                rounded-xl
-                hover:bg-[#056c92]
-                transition
-                "
-              >
-                <FaGithub size={20} />
-              </a>
-
-            </div>
-          </div>
-
+    {/* YouTube */}
+    <a
+      href="https://youtube.com/@mpsdtrinitytechnologeis?si=1xdu_Z_Eeoe_AA-g"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        bg-[#1f7a8c]
+        p-3
+        rounded-xl
+        hover:bg-[#056c92]
+        transition
+      "
+      aria-label="YouTube"
+    >
+      <FaYoutube size={20} />
+    </a>
+  </div>
+</div>
         </div>
 
       </div>
