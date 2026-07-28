@@ -29,7 +29,7 @@ export default function About() {
               "
             >
               <img
-                src="/founder.jpg"
+                src="/founder.png"
                 alt="Daniel S"
                 className="
                 w-full
